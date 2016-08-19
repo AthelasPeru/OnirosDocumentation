@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Includes Folder &mdash; Oniros 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Oniros 1.0 documentation" href="index.html" />
+    <link rel="next" title="Assets" href="assets.html" />
+    <link rel="prev" title="Wordpress Files" href="wordpress_files.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="includes-folder">
+<h1>Includes Folder<a class="headerlink" href="#includes-folder" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="admin-teaks">
+<h3>admin-teaks<a class="headerlink" href="#admin-teaks" title="Permalink to this headline">¶</a></h3>
+<p>Here we define functions that will edit the way the Admin panel will
+behave or feel.</p>
+<p><strong>replace_footer_admin</strong></p>
+<p>replaces the default admin for a cutom one. To add yourself here just
+ad an anchor tag or span to the HTML</p>
+<p><strong>remove_dashboard_meta</strong></p>
+<p>Removes default dashboard metaboxes.</p>
+<p><strong>oniros_login_css</strong></p>
+<p>Enqueues oniros login styles from <em>dist/css/login.min.css</em></p>
+<p><strong>oniros_login_url</strong></p>
+<p>Changes the login logo link to the site url</p>
+<p><strong>oniros_login_title</strong>
+Changes the alt text on the logo link to the site name</p>
+</div>
+<div class="section" id="ajax">
+<h3>ajax<a class="headerlink" href="#ajax" title="Permalink to this headline">¶</a></h3>
+<p>This file sets the basics for using ajax in WP, here you should add the
+php process that will generate the data to return.</p>
+</div>
+<div class="section" id="utilities">
+<h3>utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="oniros-thumbnail">
+<h4>oniros_thumbnail()<a class="headerlink" href="#oniros-thumbnail" title="Permalink to this headline">¶</a></h4>
+<p>Simple function to facilitate thumbnail use with <a class="reference external" href="http://www.advancedcustomfields.com/?ref=http://www.athelas.pe/oniros">Advanced Custom Fields Plugin</a>. You can pass an array with classes and an ID if you want some image-field out of the WP_query. The main parameters are the $image_field_name and the $image_size_name (see image_sizes Documentation below).</p>
+</div>
+<div class="section" id="get-oniros-custom-field-excerpt">
+<h4>get_oniros_custom_field_excerpt()<a class="headerlink" href="#get-oniros-custom-field-excerpt" title="Permalink to this headline">¶</a></h4>
+<p>Just a common snippet for wordpress if you want to work with custom posttypes and <a class="reference external" href="http://www.advancedcustomfields.com/?ref=http://www.athelas.pe/oniros">Advanced Custom Fields Plugin</a>, it makes easy to show just an excerpt of any type of text area field on any type of custom posttype. Accepts 2 parameters :  $text_field and the number of $chars you want to show.</p>
+</div>
+<div class="section" id="the-excerpt-max-charlength">
+<h4>the_excerpt_max_charlength()<a class="headerlink" href="#the-excerpt-max-charlength" title="Permalink to this headline">¶</a></h4>
+<p>Another common script (one you don&#8217;t want to miss on your wp theme) that changes the default charlength of the custom blog-post excerpt.</p>
+</div>
+<div class="section" id="oniros-breadcrumb">
+<h4>oniros_breadcrumb()<a class="headerlink" href="#oniros-breadcrumb" title="Permalink to this headline">¶</a></h4>
+<p>[Work in Progress...] This is a function you will need to edit before you use it. It&#8217;s not on it&#8217;s final form and the use of this depends on the way your frontend is built, and on the way your Information Arquitecture is made, etc. The logic is simple: it gets the URL of the current page (the page where you excecute the function...) and it cleans the info so you can have breadcrumbs. <strong>IF YOUR WEB ARQUITECTURE IS NOT CLEAR AND SEO-FRIENDLY, THIS WILL NOT WORK.</strong></p>
+</div>
+<div class="section" id="oniros-pagination">
+<h4>oniros_pagination()<a class="headerlink" href="#oniros-pagination" title="Permalink to this headline">¶</a></h4>
+<p>[Work in Progress...] Pagination that works. Almost all the times. This is a snippet found on <a class="reference external" href="http://www.wpexplorer.com/pagination-wordpress-theme/?ref=http://www.athelas.pe/oniros">WPExplorer</a>.</p>
+</div>
+<div class="section" id="related-posts-args">
+<h4>related_posts_args()<a class="headerlink" href="#related-posts-args" title="Permalink to this headline">¶</a></h4>
+<p>[Work in Progress...] Ok. So this is a great tool you should understand yourself and change it to your needs. The idea is that you will just need to run this like</p>
+<blockquote>
+<div>$args = related_posts_args();</div></blockquote>
+<p>and with that you will have everything ready. The example that is implemented works together with athelas_set_post_views() (see below). It uses the meta information that is generated by post views and then orders related posts [same posttype actually (you can add args like category or tags)] by postviews.</p>
+<p>The whole Idea is to have less php in your templates, and more in your include files. So you can control better what you do.</p>
+</div>
+<div class="section" id="oniros-show-categories">
+<h4>oniros_show_categories()<a class="headerlink" href="#oniros-show-categories" title="Permalink to this headline">¶</a></h4>
+<p>Show your categories in a simple html template. You can add classes, edit the template or just use css to make it look what you want.</p>
+</div>
+<div class="section" id="add-custom-posts-per-page">
+<h4>add_custom_posts_per_page()<a class="headerlink" href="#add-custom-posts-per-page" title="Permalink to this headline">¶</a></h4>
+<p>[Work in Progress...] This is magic. I&#8217;m sorry but I can&#8217;t explain yet how this fixes everything all the time, but the oniros_pagination() function will probably not work if this is erased. So keep it for your own good.</p>
+</div>
+<div class="section" id="oniros-set-post-views">
+<h4>oniros_set_post_views()<a class="headerlink" href="#oniros-set-post-views" title="Permalink to this headline">¶</a></h4>
+<p>This function makes the magic for post views ordering with the next one. Just use it in the loop with the post_id.</p>
+</div>
+<div class="section" id="oniros-track-post-views">
+<h4>oniros_track_post_views()<a class="headerlink" href="#oniros-track-post-views" title="Permalink to this headline">¶</a></h4>
+<p>This function makes the magic for post views ordering with the previous one. Just leave it and love it.</p>
+</div>
+<div class="section" id="oniros-get-post-views">
+<h4>oniros_get_post_views()<a class="headerlink" href="#oniros-get-post-views" title="Permalink to this headline">¶</a></h4>
+<p>Just if you want to show post-views in your templates, use this function.</p>
+</div>
+</div>
+<div class="section" id="image-sizes">
+<h3>image-sizes<a class="headerlink" href="#image-sizes" title="Permalink to this headline">¶</a></h3>
+<p>Add custom croping image sizes to your WP template</p>
+</div>
+<div class="section" id="menu">
+<h3>menu<a class="headerlink" href="#menu" title="Permalink to this headline">¶</a></h3>
+<p>Add custom menus to your WP template</p>
+</div>
+<div class="section" id="posttypes">
+<h3>posttypes<a class="headerlink" href="#posttypes" title="Permalink to this headline">¶</a></h3>
+<p>Add Custom Post Types to your WP template</p>
+</div>
+<div class="section" id="security">
+<h3>security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h3>
+<p>Ofuscating wordpress version from different files.</p>
+</div>
+<div class="section" id="taxonomies">
+<h3>taxonomies<a class="headerlink" href="#taxonomies" title="Permalink to this headline">¶</a></h3>
+<p>Create custom taxonomies for your theme.</p>
+</div>
+<div class="section" id="theme-support">
+<h3>theme_support<a class="headerlink" href="#theme-support" title="Permalink to this headline">¶</a></h3>
+<p>Adds theme support for HTML5 fields and automatic fields links</p>
+</div>
+<div class="section" id="translation-strings">
+<h3>translation_strings<a class="headerlink" href="#translation-strings" title="Permalink to this headline">¶</a></h3>
+<p>Here you can set the static texts of your Template to be translated by the Polylang translation plugin.</p>
+</div>
+</div>
+<div class="section" id="templates">
+<h2>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h2>
+<p>Here we add template parts that will be reused in more than one page, or page sections that will get complicated and should be in their proper file.</p>
+<div class="section" id="id2">
+<h3>menu<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Main menu template</p>
+</div>
+<div class="section" id="mobile-menu">
+<h3>mobile-menu<a class="headerlink" href="#mobile-menu" title="Permalink to this headline">¶</a></h3>
+<p>mobile menu template</p>
+</div>
+<div class="section" id="searchform">
+<h3>searchform<a class="headerlink" href="#searchform" title="Permalink to this headline">¶</a></h3>
+<p>searchform template</p>
+</div>
+<div class="section" id="sidebar">
+<h3>sidebar<a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h3>
+<p>sidebar template</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Includes Folder</a><ul>
+<li><a class="reference internal" href="#functions">Functions</a><ul>
+<li><a class="reference internal" href="#admin-teaks">admin-teaks</a></li>
+<li><a class="reference internal" href="#ajax">ajax</a></li>
+<li><a class="reference internal" href="#utilities">utilities</a><ul>
+<li><a class="reference internal" href="#oniros-thumbnail">oniros_thumbnail()</a></li>
+<li><a class="reference internal" href="#get-oniros-custom-field-excerpt">get_oniros_custom_field_excerpt()</a></li>
+<li><a class="reference internal" href="#the-excerpt-max-charlength">the_excerpt_max_charlength()</a></li>
+<li><a class="reference internal" href="#oniros-breadcrumb">oniros_breadcrumb()</a></li>
+<li><a class="reference internal" href="#oniros-pagination">oniros_pagination()</a></li>
+<li><a class="reference internal" href="#related-posts-args">related_posts_args()</a></li>
+<li><a class="reference internal" href="#oniros-show-categories">oniros_show_categories()</a></li>
+<li><a class="reference internal" href="#add-custom-posts-per-page">add_custom_posts_per_page()</a></li>
+<li><a class="reference internal" href="#oniros-set-post-views">oniros_set_post_views()</a></li>
+<li><a class="reference internal" href="#oniros-track-post-views">oniros_track_post_views()</a></li>
+<li><a class="reference internal" href="#oniros-get-post-views">oniros_get_post_views()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#image-sizes">image-sizes</a></li>
+<li><a class="reference internal" href="#menu">menu</a></li>
+<li><a class="reference internal" href="#posttypes">posttypes</a></li>
+<li><a class="reference internal" href="#security">security</a></li>
+<li><a class="reference internal" href="#taxonomies">taxonomies</a></li>
+<li><a class="reference internal" href="#theme-support">theme_support</a></li>
+<li><a class="reference internal" href="#translation-strings">translation_strings</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#templates">Templates</a><ul>
+<li><a class="reference internal" href="#id2">menu</a></li>
+<li><a class="reference internal" href="#mobile-menu">mobile-menu</a></li>
+<li><a class="reference internal" href="#searchform">searchform</a></li>
+<li><a class="reference internal" href="#sidebar">sidebar</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="wordpress_files.html" title="previous chapter">Wordpress Files</a></li>
+      <li>Next: <a href="assets.html" title="next chapter">Assets</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/includes.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Athelas SAC.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/includes.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

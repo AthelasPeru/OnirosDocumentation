@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>.htaccess file &mdash; Oniros 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Oniros 1.0 documentation" href="index.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="npm Scripts" href="npm.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="htaccess-file">
+<h1>.htaccess file<a class="headerlink" href="#htaccess-file" title="Permalink to this headline">¶</a></h1>
+<p>This is the <strong>.htaccess</strong> file we use as a base for our projects, specially when wqe have to work with
+shared servers and cannot use <strong>nginx</strong> as our server.</p>
+<p>Basically it does the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Defines mime types the web server might not know about.</li>
+<li>gzips (compresses) defined mime type files (don&#8217;t add png to the mime types, it doesn&#8217;t compress at all).</li>
+<li>Adds expiracy headers for different mime type files.</li>
+<li>Defines cache headers for different file types.</li>
+</ul>
+</div></blockquote>
+<div class="code bash highlight-python"><div class="highlight"><pre># -----------------------------------------------------------------------
+# Defining MIME types to ensure the web server actually knows about them.
+# -----------------------------------------------------------------------
+&lt;IfModule mod_mime.c&gt;
+    AddType application/javascript          js
+    AddType application/vnd.ms-fontobject   eot
+
+    AddType application/font-woff2          woff2
+    AddType application/x-font-ttf          ttf ttc
+    AddType font/opentype                   otf
+    AddType application/x-font-woff         woff
+    AddType image/svg+xml                   svg svgz
+    AddEncoding gzip                        svgz
+&lt;/Ifmodule&gt;
+
+&lt;ifmodule mod_deflate.c&gt;
+        AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript  application/font-woff2  application/x-font-ttf image/gif image/jpeg AddType font/opentype  image/x-icon  image/svg+xml application/vnd.ms-fontobject
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+&lt;/ifmodule&gt;
+
+# Expires Headers - 2678400s = 31 days
+&lt;ifmodule mod_expires.c&gt;
+  ExpiresActive On
+  ExpiresDefault &quot;access plus 1 seconds&quot;
+  ExpiresByType text/html &quot;access plus 7200 seconds&quot;
+  ExpiresByType image/gif &quot;access plus 2678400 seconds&quot;
+  ExpiresByType image/jpeg &quot;access plus 2678400 seconds&quot;
+  ExpiresByType image/png &quot;access plus 2678400 seconds&quot;
+  ExpiresByType image/svg+xml &quot;access plus 2678400 seconds&quot;
+  ExpiresByType text/css &quot;access plus 518400 seconds&quot;
+  ExpiresByType text/javascript &quot;access plus 2678400 seconds&quot;
+  ExpiresByType application/x-javascript &quot;access plus 2678400 seconds&quot;
+&lt;/ifmodule&gt;
+
+# Cache Headers
+&lt;ifmodule mod_headers.c&gt;
+  # Cache specified files for 31 days
+  &lt;filesmatch &quot;\.(ico|flv|jpg|jpeg|png|gif|css|swf|svg)$&quot;&gt;
+  Header set Cache-Control &quot;max-age=2678400, public&quot;
+  &lt;/filesmatch&gt;
+  # Cache HTML files for a couple hours
+  &lt;filesmatch &quot;\.(html|htm)$&quot;&gt;
+  Header set Cache-Control &quot;max-age=7200, private, must-revalidate&quot;
+  &lt;/filesmatch&gt;
+  # Cache PDFs for a day
+  &lt;filesmatch &quot;\.(pdf)$&quot;&gt;
+  Header set Cache-Control &quot;max-age=86400, public&quot;
+  &lt;/filesmatch&gt;
+  # Cache Javascripts for 31 days
+  &lt;filesmatch &quot;\.(js)$&quot;&gt;
+  Header set Cache-Control &quot;max-age=2678400, private&quot;
+  &lt;/filesmatch&gt;
+&lt;/ifmodule&gt;
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="npm.html" title="previous chapter">npm Scripts</a></li>
+      <li>Next: <a href="contributing.html" title="next chapter">Contributing</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/htaccess.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Athelas SAC.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/htaccess.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

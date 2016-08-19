@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The Workflow &mdash; Oniros 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Oniros 1.0 documentation" href="index.html" />
+    <link rel="next" title="Static Site folder" href="static_site.html" />
+    <link rel="prev" title="Welcome to Oniros’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-workflow">
+<h1>The Workflow<a class="headerlink" href="#the-workflow" title="Permalink to this headline">¶</a></h1>
+<p><strong>Oniros</strong> was build with a particular workflow in sight, but we think it&#8217;s flexible enough for front/wordpress developers
+that want to use customizable tools and a <a class="reference external" href="http://gulpjs.com/">Gulp workflow</a>.</p>
+<p>The goal is to help developers deliver the best product they can without having to spend hours configuring basic
+stuff every <em>top notch</em> Wordpress template should have.</p>
+<p>With <strong>Oniros</strong> developers can focus on complex tasks the client might require, like custom plugins, integrations, etc. Organization of your files and frontend building tools shouldn&#8217;t bother you on a per project basis!</p>
+<p>We usually worrk on a remote server</p>
+<div class="section" id="steps">
+<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
+<p>There are a few steps we follow when working with Oniros, maybe they help you too.</p>
+<ol class="arabic simple">
+<li>Build/copy the static version of the site in/to the <strong>static_site</strong> folder</li>
+<li>If you are building your static site here, you can use <strong>gulp watch</strong> to autoreload your scss changes</li>
+<li>Comment/Uncomment includes in the <strong>functions.php</strong> file</li>
+<li>If you need a slider run bower install and comment/uncomment the respective pages in the athelas_scripts function in <strong>functions.php</strong></li>
+<li>Define our Custom post types in includes/functions/posttypes.php</li>
+<li>Define our menus in includes/functions/menu.php</li>
+<li>Create specific Page/Archive/Single/Category/Taxonomy/etc pages in the root folder</li>
+<li>Decide if Google Analitycs will go in the header or footer</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The Workflow</a><ul>
+<li><a class="reference internal" href="#steps">Steps</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Oniros&#8217;s documentation!</a></li>
+      <li>Next: <a href="static_site.html" title="next chapter">Static Site folder</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/workflow.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Athelas SAC.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/workflow.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

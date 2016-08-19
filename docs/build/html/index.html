@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to Oniros’s documentation! &mdash; Oniros 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Oniros 1.0 documentation" href="#" />
+    <link rel="next" title="The Workflow" href="workflow.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-oniros-s-documentation">
+<h1>Welcome to Oniros&#8217;s documentation!<a class="headerlink" href="#welcome-to-oniros-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/AthelasPeru/oniros">Get Oniros</a></p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="workflow.html">The Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow.html#steps">Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="static_site.html">Static Site Folder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wordpress_files.html">Wordpress Files and Functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wordpress_files.html#working-with-index-php">Working with index.php</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="includes.html">Includes Folder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="includes.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="includes.html#templates">Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="assets.html">Assets (SCSS, JS, Images, Sprites)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="npm.html">npm Scripts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="npm.html#how-to-use-them">How to use them</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="htaccess.html">.htaccess file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#submitting-an-issue">Submitting an Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#submitting-a-pull-request">Submitting a Pull Request</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">Suggested Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#forms">Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#security">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#content">Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#migrations">Migrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#media">Media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#backup">Backup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#seo">SEO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#ssl">SSL</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="todo">
+<h3>TODO<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Start and finish the assets documentation</li>
+</ul>
+</div>
+<div class="section" id="what-is-oniros">
+<h3>What is Oniros?<a class="headerlink" href="#what-is-oniros" title="Permalink to this headline">¶</a></h3>
+<p>Oniros is our base template for building really good wordpress templates.
+It was build to optimize our workflow and ensure best practices and similar patterns on our projects.
+We try to cover most usecases we encounter on a daily basis, so we don&#8217;t have to be searching on old folders for the solution or way to implement
+something we build for a project 2 months ago.</p>
+</div>
+<div class="section" id="what-does-it-include-require-to-work">
+<h3>What does it include/require to work?<a class="headerlink" href="#what-does-it-include-require-to-work" title="Permalink to this headline">¶</a></h3>
+<p><strong>Includes</strong></p>
+<ul class="simple">
+<li>Sass structure</li>
+<li>Susy</li>
+<li>Sass Mixins (Juice)</li>
+<li>Npm Scripts workflow</li>
+<li>Slick Slider (with bower)</li>
+</ul>
+<p><strong>Requires</strong></p>
+<ul class="simple">
+<li>npm</li>
+<li>bower (to install slick slider)</li>
+</ul>
+</div>
+<div class="section" id="why-oniros">
+<h3>Why Oniros?<a class="headerlink" href="#why-oniros" title="Permalink to this headline">¶</a></h3>
+<p>We know there are a lot of other <strong>Wordpress Templates</strong> out there. For example, many of our developers worked with <a class="reference external" href="http://themble.com/bones/">Bones</a> template in the past. But we found ourselves erasing most of it&#8217;s markup and modifying the way they did some stuff.
+Also, we thought it be pretty nice to add our <strong>npm scripts build system</strong> created for our <strong>static</strong> and <a class="reference external" href="http://wordpress.orgm/">WordPress</a> projects inspired on the great <a class="reference external" href="https://github.com/beatpixel/Frontend-StarterKit">Frontend Starter Kit</a>. (we used to use gulp up until version 5.0)</p>
+<p>Oh, you meant the name? Well, first, we are <strong>huge</strong> <a class="reference external" href="http://www.vertigocomics.com/characters/the-sandman">The Sandman</a> fans, second, our native tongue is spanish so we preffer the <em>spanification</em> of the name <strong>Oneiros</strong>. That&#8217;s really it! Well and the fact that <strong>Oniros</strong> is the builder of dreams, and that&#8217;s just awesome!</p>
+</div>
+<div class="section" id="what-can-oniros-do-for-me">
+<h3>What can Oniros do for me?<a class="headerlink" href="#what-can-oniros-do-for-me" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="in-wordpress">
+<h4>In Wordpress<a class="headerlink" href="#in-wordpress" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Quickly start a WP template</li>
+<li>Easily add WP Custom Post Types</li>
+<li>Easily add WP Menus</li>
+<li>Easily add custom image sizes to WP</li>
+<li>Ajax configurarion and guide included</li>
+<li>Easily add custom taxonomies</li>
+<li>Polylang multilanguage site prepared</li>
+<li>Help you reduce the use of external plugins</li>
+<li>Allow you to use javascript files on specific pages</li>
+<li>Follow good practices</li>
+</ul>
+</div>
+<div class="section" id="in-general">
+<h4>In general<a class="headerlink" href="#in-general" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Automatically generate all favicons with realfavicongenerator.com</li>
+<li>Optimize your images</li>
+<li>Process and minimize your sass files</li>
+<li>Create an svg spritesheet with it&#8217;s scss classes directly embedded into your sass files</li>
+<li>uncss your css files if you want to</li>
+<li>Separate Admin/Login and Main theme WP css and js files</li>
+<li>Minimize and concatenate your javascript files, differentiating between your head and footer scripts</li>
+<li>Work with browsersync live reloading all of your scss and js changes</li>
+</ul>
+</div>
+</div>
+<div class="section" id="why-share-it">
+<h3>Why share it?<a class="headerlink" href="#why-share-it" title="Permalink to this headline">¶</a></h3>
+<p>Why, isn&#8217;t it obvious???? We have learned so much from the <strong>open source</strong> community, and wouldn&#8217;t have been able to build this tool without it. It&#8217;s only reasonable to give back, wouldn&#8217;t you agree?</p>
+</div>
+<div class="section" id="who-is-oniros-for">
+<h3>Who is Oniros for?<a class="headerlink" href="#who-is-oniros-for" title="Permalink to this headline">¶</a></h3>
+<p>Oniros is for WP developers that want to build any kind of website with <strong>Wordpress</strong>, use Custom Post Types regularly and doesn&#8217;t necesarily build Blog like websites.
+It&#8217;s also for Wordpress Developers that tend to work with Frontend developers that deliver static code to them.</p>
+</div>
+</div>
+</div>
+<div class="section" id="search-page">
+<h1>Search Page<a class="headerlink" href="#search-page" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Oniros&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#todo">TODO</a></li>
+<li><a class="reference internal" href="#what-is-oniros">What is Oniros?</a></li>
+<li><a class="reference internal" href="#what-does-it-include-require-to-work">What does it include/require to work?</a></li>
+<li><a class="reference internal" href="#why-oniros">Why Oniros?</a></li>
+<li><a class="reference internal" href="#what-can-oniros-do-for-me">What can Oniros do for me?</a><ul>
+<li><a class="reference internal" href="#in-wordpress">In Wordpress</a></li>
+<li><a class="reference internal" href="#in-general">In general</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#why-share-it">Why share it?</a></li>
+<li><a class="reference internal" href="#who-is-oniros-for">Who is Oniros for?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#search-page">Search Page</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="workflow.html" title="next chapter">The Workflow</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Athelas SAC.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="_sources/index.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
