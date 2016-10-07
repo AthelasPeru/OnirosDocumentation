@@ -19,10 +19,9 @@ Steps
 There are a few steps we follow when working with Oniros, maybe they help you too.
 
 1. Build/copy the static version of the site in/to the **static_site** folder
-2. If you are building your static site here, you can use **gulp watch** to autoreload your scss changes
-3. Comment/Uncomment includes in the **functions.php** file
-4. If you need a slider run bower install and comment/uncomment the respective pages in the athelas_scripts function in **functions.php**
-5. Define our Custom post types in includes/functions/posttypes.php
-6. Define our menus in includes/functions/menu.php
-7. Create specific Page/Archive/Single/Category/Taxonomy/etc pages in the root folder
-8. Decide if Google Analitycs will go in the header or footer
+2. Name your theme and fill in it's properties in style.css
+3. npm install at the root project folder
+4. Comment/Uncomment includes in the **functions.php** file
+5. If you need a slider run bower install and comment/uncomment the respective pages in the athelas_scripts function in **functions.php**
+6. Use npm run oniros to use the cli to build your Custom Post Types, Category, Taxonomy or Pages templates
+7. Define our menus in includes/functions/menu.php

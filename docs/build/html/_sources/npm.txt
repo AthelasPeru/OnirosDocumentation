@@ -5,14 +5,15 @@ What?? npm scripts?? how about **Gulp**, **broccoli**, **grunt**, **<insert yopu
 
 Well, if you look at our `tags <https://github.com/AthelasPeru/oniros/releases>`_, you will see version **v0.5**. It was build with a brilliant gulp process. So, what happened? Well, it was more than one thing, some of our programmers had problems with gulp running flawlessly on their machines, others where used to grunt, and this made then resistant to try oniros. 
 
-Then the whole `npm scripts <https://css-tricks.com/why-npm-scripts/>`_ movement started catching our attention, and having started as a sysadmin, `ondoheer <http://www.ondoheer.com>`_ decided it was easier to mantain and teach plain shell commands than other build tools.
+Then the whole `npm scripts <https://css-tricks.com/why-npm-scripts/>`_ movement started catching our attention, and having started as a sysadmin, `ondoheer <http://www.ondoheer.com>`_ decided it was easier to mantain and teach plain shell commands than other build tools. He wrote a blog post about our transition `here <https://codepicnic.com/posts/moving-from-gulp-to-npm-scripts-6f3ef77ac0e3619e98159e9b6febf557/>`_ 
 
-The time it took to build these scripts was **significantly** lower than the time it took to build our gulp process, and it was quickly tested on all of our programmers machines without a problem (only Linux and OSX so far). We are just scratiching the surface of what npm scripts can do, but we wanted to start using it and improving it as we rolled.
+
 
 How to use them
 ++++++++++++++++++
 
-If you have used any build tool before, it's as simple as that. just run::
+We recommend you use them through the `Oniros CLI interface <//athelas.pe/oniros/oniros_cli>`_, otherwise,
+if you have used any build tool before, it's as simple as that. just run::
     
     npm run <scriptname>
 
@@ -57,17 +58,12 @@ You can also run them independently for each area::
     $ npm run admin:scss:min
 
 
-UnCSS
-**********
-
-TODO
-
 
 Javascript
 *************
 
 These npm scripts look to uglify and minimize the scripts that should go in the head and footer of the documment independently.
-Oniros comes with different files already created, the *head* files are empty, but the *main* files are templates for you to work with, primarily **ajax-query.js** which is a template to work with ajax, and app.js, where all your general code should reside (meaning code that will work globally for all pages or has guards to prevent it to throw exceptions or break when run on the wrong page). **single** folder contains the code you will enqueue to run on specific pages.
+Oniros comes with different files already created, the *main* files are templates for you to work with, primarily **ajax-query.js** which is a template to work with ajax, and app.js, where all your general code should reside (meaning code that will work globally for all pages or has guards to prevent it to throw exceptions or break when run on the wrong page). **single** folder contains the code you will enqueue to run on specific pages.
 
 Right now **Oniros** comes with a script for each section, you can run them all together by running::
 
@@ -77,8 +73,6 @@ Right now **Oniros** comes with a script for each section, you can run them all 
 or run them independently by running::
     
     $ npm run main:build:js
-
-    $ npm run head:build:js
 
     $ npm run single:build:js
 
@@ -99,11 +93,7 @@ just run::
     
     $ npm run imagemin
 
-**svg sprite generation**: creates an svg sprite with all the svg's found in the **source/sprite** folder, adds *scss* mixins for you to use them in your project easily into the **source/scss/main/components/_sprite.scss** file.
-
-just run::
-    
-    $ npm run sprite:svg 
+**svg sprite generation**: Oniros is build for the modern web, this script was removed since HTTP/2 hit the markets.
 
 
 **Real favicons**: creates a set of favicons using the `Real Favicon Generator <http://www.realfavicongenerator.com>`_ API. It will look for a **favicon.png** file in the **source/img** folder and process it. All of the resulting favicons are already being called from the WP header.php file.

@@ -42,11 +42,11 @@
 <h1>npm Scripts<a class="headerlink" href="#npm-scripts" title="Permalink to this headline">¶</a></h1>
 <p>What?? npm scripts?? how about <strong>Gulp</strong>, <strong>broccoli</strong>, <strong>grunt</strong>, <strong>&lt;insert yopur favorite building tool here&gt;</strong>???</p>
 <p>Well, if you look at our <a class="reference external" href="https://github.com/AthelasPeru/oniros/releases">tags</a>, you will see version <strong>v0.5</strong>. It was build with a brilliant gulp process. So, what happened? Well, it was more than one thing, some of our programmers had problems with gulp running flawlessly on their machines, others where used to grunt, and this made then resistant to try oniros.</p>
-<p>Then the whole <a class="reference external" href="https://css-tricks.com/why-npm-scripts/">npm scripts</a> movement started catching our attention, and having started as a sysadmin, <a class="reference external" href="http://www.ondoheer.com">ondoheer</a> decided it was easier to mantain and teach plain shell commands than other build tools.</p>
-<p>The time it took to build these scripts was <strong>significantly</strong> lower than the time it took to build our gulp process, and it was quickly tested on all of our programmers machines without a problem (only Linux and OSX so far). We are just scratiching the surface of what npm scripts can do, but we wanted to start using it and improving it as we rolled.</p>
+<p>Then the whole <a class="reference external" href="https://css-tricks.com/why-npm-scripts/">npm scripts</a> movement started catching our attention, and having started as a sysadmin, <a class="reference external" href="http://www.ondoheer.com">ondoheer</a> decided it was easier to mantain and teach plain shell commands than other build tools. He wrote a blog post about our transition <a class="reference external" href="https://codepicnic.com/posts/moving-from-gulp-to-npm-scripts-6f3ef77ac0e3619e98159e9b6febf557/">here</a></p>
 <div class="section" id="how-to-use-them">
 <h2>How to use them<a class="headerlink" href="#how-to-use-them" title="Permalink to this headline">¶</a></h2>
-<p>If you have used any build tool before, it&#8217;s as simple as that. just run:</p>
+<p>We recommend you use them through the <a class="reference external" href="//athelas.pe/oniros/oniros_cli">Oniros CLI interface</a>, otherwise,
+if you have used any build tool before, it&#8217;s as simple as that. just run:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>npm run &lt;scriptname&gt;
 </pre></div>
 </div>
@@ -81,22 +81,16 @@ $ npm run admin:scss:min
 </pre></div>
 </div>
 </div>
-<div class="section" id="uncss">
-<h4>UnCSS<a class="headerlink" href="#uncss" title="Permalink to this headline">¶</a></h4>
-<p>TODO</p>
-</div>
 <div class="section" id="javascript">
 <h4>Javascript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h4>
 <p>These npm scripts look to uglify and minimize the scripts that should go in the head and footer of the documment independently.
-Oniros comes with different files already created, the <em>head</em> files are empty, but the <em>main</em> files are templates for you to work with, primarily <strong>ajax-query.js</strong> which is a template to work with ajax, and app.js, where all your general code should reside (meaning code that will work globally for all pages or has guards to prevent it to throw exceptions or break when run on the wrong page). <strong>single</strong> folder contains the code you will enqueue to run on specific pages.</p>
+Oniros comes with different files already created, the <em>main</em> files are templates for you to work with, primarily <strong>ajax-query.js</strong> which is a template to work with ajax, and app.js, where all your general code should reside (meaning code that will work globally for all pages or has guards to prevent it to throw exceptions or break when run on the wrong page). <strong>single</strong> folder contains the code you will enqueue to run on specific pages.</p>
 <p>Right now <strong>Oniros</strong> comes with a script for each section, you can run them all together by running:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run all:build:js
 </pre></div>
 </div>
 <p>or run them independently by running:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run main:build:js
-
-$ npm run head:build:js
 
 $ npm run single:build:js
 </pre></div>
@@ -112,11 +106,7 @@ $ npm run single:build:js
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run imagemin
 </pre></div>
 </div>
-<p><strong>svg sprite generation</strong>: creates an svg sprite with all the svg&#8217;s found in the <strong>source/sprite</strong> folder, adds <em>scss</em> mixins for you to use them in your project easily into the <strong>source/scss/main/components/_sprite.scss</strong> file.</p>
-<p>just run:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run sprite:svg
-</pre></div>
-</div>
+<p><strong>svg sprite generation</strong>: Oniros is build for the modern web, this script was removed since HTTP/2 hit the markets.</p>
 <p><strong>Real favicons</strong>: creates a set of favicons using the <a class="reference external" href="http://www.realfavicongenerator.com">Real Favicon Generator</a> API. It will look for a <strong>favicon.png</strong> file in the <strong>source/img</strong> folder and process it. All of the resulting favicons are already being called from the WP header.php file.</p>
 <p>just run:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run favicon
@@ -152,7 +142,6 @@ $ npm run single:build:js
 <li><a class="reference internal" href="#scripts">Scripts</a><ul>
 <li><a class="reference internal" href="#build-all">Build All!</a></li>
 <li><a class="reference internal" href="#css">Css</a></li>
-<li><a class="reference internal" href="#uncss">UnCSS</a></li>
 <li><a class="reference internal" href="#javascript">Javascript</a></li>
 <li><a class="reference internal" href="#images">Images</a></li>
 <li><a class="reference internal" href="#serve-and-watch">Serve and Watch</a></li>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The Workflow &mdash; Oniros 1.0 documentation</title>
+    <title>Oniros CLI &mdash; Oniros 1.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,8 +24,6 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="Oniros 1.0 documentation" href="index.html" />
-    <link rel="next" title="Static Site folder" href="static_site.html" />
-    <link rel="prev" title="Welcome to Oniros’s documentation!" href="index.html" />
    
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -38,27 +36,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="the-workflow">
-<h1>The Workflow<a class="headerlink" href="#the-workflow" title="Permalink to this headline">¶</a></h1>
-<p><strong>Oniros</strong> was build with a particular workflow in sight, but we think it&#8217;s flexible enough for front/wordpress developers
-that want to use customizable tools and a <a class="reference external" href="http://gulpjs.com/">Gulp workflow</a>.</p>
-<p>The goal is to help developers deliver the best product they can without having to spend hours configuring basic
-stuff every <em>top notch</em> Wordpress template should have.</p>
-<p>With <strong>Oniros</strong> developers can focus on complex tasks the client might require, like custom plugins, integrations, etc. Organization of your files and frontend building tools shouldn&#8217;t bother you on a per project basis!</p>
-<p>We usually worrk on a remote server</p>
-<div class="section" id="steps">
-<h2>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h2>
-<p>There are a few steps we follow when working with Oniros, maybe they help you too.</p>
-<ol class="arabic simple">
-<li>Build/copy the static version of the site in/to the <strong>static_site</strong> folder</li>
-<li>Name your theme and fill in it&#8217;s properties in style.css</li>
-<li>npm install at the root project folder</li>
-<li>Comment/Uncomment includes in the <strong>functions.php</strong> file</li>
-<li>If you need a slider run bower install and comment/uncomment the respective pages in the athelas_scripts function in <strong>functions.php</strong></li>
-<li>Use npm run oniros to use the cli to build your Custom Post Types, Category, Taxonomy or Pages templates</li>
-<li>Define our menus in includes/functions/menu.php</li>
-</ol>
+  <div class="section" id="oniros-cli">
+<h1>Oniros CLI<a class="headerlink" href="#oniros-cli" title="Permalink to this headline">¶</a></h1>
+<p>Oniros CLI was build to help you build a WP theme even faster. just run</p>
+<p>&#8211; code-block:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ npm run oniros
+</pre></div>
 </div>
+<p>and it will list the availiable options</p>
 </div>
 
 
@@ -66,27 +51,17 @@ stuff every <em>top notch</em> Wordpress template should have.</p>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">The Workflow</a><ul>
-<li><a class="reference internal" href="#steps">Steps</a></li>
-</ul>
-</li>
-</ul>
-<div class="relations">
+        <div class="sphinxsidebarwrapper"><div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Oniros&#8217;s documentation!</a></li>
-      <li>Next: <a href="static_site.html" title="next chapter">Static Site folder</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/workflow.txt"
+      <li><a href="_sources/oniros_cli.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -115,7 +90,7 @@ stuff every <em>top notch</em> Wordpress template should have.</p>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
       
       |
-      <a href="_sources/workflow.txt"
+      <a href="_sources/oniros_cli.txt"
           rel="nofollow">Page source</a>
     </div>
 

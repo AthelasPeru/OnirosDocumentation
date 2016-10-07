@@ -40,9 +40,48 @@
             
   <div class="section" id="wordpress-files">
 <h1>Wordpress Files<a class="headerlink" href="#wordpress-files" title="Permalink to this headline">¶</a></h1>
-<p>Most of the files are self explanatory for a WP theme developer, also they include comments to help you get started.</p>
-<div class="section" id="working-with-index-php">
-<h2>Working with index.php<a class="headerlink" href="#working-with-index-php" title="Permalink to this headline">¶</a></h2>
+<p>Most of the files are self explanatory for a WP theme developer, also they include comments to help you get started.
+We will only list the files and folders we structure in a particular way.</p>
+<div class="section" id="includes">
+<h2>includes/<a class="headerlink" href="#includes" title="Permalink to this headline">¶</a></h2>
+<p>This folder holds most of our custom templates and functions, we encourage you to dwelve into them and learn what they can do for you.</p>
+<div class="section" id="functions">
+<h3>functions/<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<p>All of these files can be included from <strong>functions.php</strong>, just uncomment the ones you require.</p>
+<ul class="simple">
+<li><strong>admin-tweaks-php</strong>: Specific tweaks we made to the admin panel.</li>
+<li><strong>ajax.php</strong>: Basic boilerplate and example for working with ajax.</li>
+<li><strong>customizer</strong>: Functions that modify the theme customizer menu.</li>
+<li><strong>image-sizes.php</strong>: Define you rtheme Image Sizes.</li>
+<li><strong>menu.php</strong>: Define your wordpress availiable menu areas.</li>
+<li><strong>posttypes.php</strong>: Use Oniros CLI or manually add Custom Post Types to your theme.</li>
+<li><strong>security</strong>: Security Functions.</li>
+<li><strong>taxonomies</strong>: Define Custom Taxonomies for your theme.</li>
+<li><strong>theme_support.php</strong>: Add or uncomment theme support functions here.</li>
+<li><strong>translation_strings.php</strong>: If you like to add translation strings manually, do it here.</li>
+<li><strong>tweaks.php</strong>: Specific tweaks we make to themes.</li>
+<li><strong>utilities.php</strong>: a class that holds most of our in agency used functions.</li>
+<li><strong>widgets</strong>: Register your custom widgets/sidebars here, build them inside <em>includes/widgets/</em>.</li>
+</ul>
+</div>
+<div class="section" id="templates">
+<h3>templates/<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
+<p>Frequently used templates we include using WP built-in <em>get_template_part</em> function.</p>
+<ul class="simple">
+<li><strong>icons.php</strong>: Include all the Real Vavicon Generator favicons.</li>
+<li><strong>menu.php</strong>: The main menu template.</li>
+<li><strong>mobile-menu.php</strong>: The mobile main menu template.</li>
+<li><strong>searchform.php</strong>: searchform template</li>
+<li><strong>sidebar.php</strong>: also pretty self explainatory ;-) we just love to break our templates in commonly used parts.</li>
+</ul>
+</div>
+<div class="section" id="widgets">
+<h3>widgets/<a class="headerlink" href="#widgets" title="Permalink to this headline">¶</a></h3>
+<p>Build all of your custom build widgets here.</p>
+<ul class="simple">
+<li><strong>example.php</strong>: Example of a company data Widget.</li>
+</ul>
+</div>
 </div>
 </div>
 
@@ -55,7 +94,12 @@
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Wordpress Files</a><ul>
-<li><a class="reference internal" href="#working-with-index-php">Working with index.php</a></li>
+<li><a class="reference internal" href="#includes">includes/</a><ul>
+<li><a class="reference internal" href="#functions">functions/</a></li>
+<li><a class="reference internal" href="#templates">templates/</a></li>
+<li><a class="reference internal" href="#widgets">widgets/</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

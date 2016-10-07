@@ -9,7 +9,7 @@ Forms
 ********
 
 - **Contact-Form-7**: Free and Flexible, `CF7 <https://wordpress.org/plugins/contact-form-7/>`_ has never failed us. It lacks a pseudo CRM like other form plugins, but that's easily solved with **Flamingo**
-- **Flamingo**: `Manage <https://wordpress.org/plugins/flamingo/>`_ your contacts list and website messages 
+- **Contact Form DB**: `Manage <https://wordpress.org/plugins/contact-form-7-to-database-extension/>`_ your contacts list and website messages 
 
 
 Security
@@ -36,6 +36,7 @@ Media
 **********
 
 - `Optimize Images Resizing <https://wordpress.org/plugins/optimize-images-resizing/>`_
+- `WP Retina 2x <https://wordpress.org/plugins/wp-retina-2x/>`_
 
 Backup
 *********
