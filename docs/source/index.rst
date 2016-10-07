@@ -48,8 +48,6 @@ What does it include/require to work?
 **Includes**
 
 - Sass structure 
-- Susy
-- Sass Mixins (Juice)
 - Npm Scripts workflow
 - Slick Slider (with bower)
 

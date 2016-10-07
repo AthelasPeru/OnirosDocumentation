@@ -17,6 +17,7 @@ Contents:
    :maxdepth: 2
 
    The Workflow <workflow>
+   Oniros CLI <oniros_cli>
    Static Site Folder <static_site>   
    Wordpress Files and Functions <wordpress_files>
    Includes Folder <includes>
