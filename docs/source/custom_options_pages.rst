@@ -100,7 +100,7 @@ The **register_setting()** method:
 .. code-block:: php
 	function display_theme_panel_location()
 	{
-		 add_settings_field( $id, $title, $callback, $page, $section, $args );
+		 register_setting( $option_group, $option_name, $sanitize_callback );
 	}
 
 This method recieves the following parameters:
@@ -125,5 +125,22 @@ This function will display the desired text on the top of the card in the genera
 How to call option fields in Php
 ++++++++++++++++++++++++++++++++++++++
 
+Doing this is pretty much simple, you just need to copy the following code and edit the parameter it recieves.
+
+.. code-block:: php
+	get_option(string $option, mixed $default = false);
+
+Parameters:
+**$option**
+(string) (Required) Name of option to retrieve. Expected to not be SQL-escaped.
+**$default**
+(mixed) (Optional) Default value to return if the option does not exist.
+Default value: false
+
+The first parameter must be the last parameter of add_settings_field() (see previous steps) and the last parameter must be the first parameter of the add_Settings_field() (see previous steps).
+
+
 Where do I find the General Options Panel in the Dashboard?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Once you've done every single step correctly, you need to upload the files you've changed to your website. After that, you will see a new menu item in the wordpress admin bar (left bar). The position of this new menu item depends on the number you set on the last parameter of the method add_menu_page() inside the add_theme_menu_item() function, which you can find in the includes/options/general_information/main.php file. The highest the number, the above the menu item gets.
