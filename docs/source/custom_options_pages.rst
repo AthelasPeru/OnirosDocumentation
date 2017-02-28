@@ -7,7 +7,7 @@ Oniros comes with one Page already created. This page is called General Informat
 You can also create more panels. In order to do that you can follow the codex instructions in: `https://codex.wordpress.org/Creating_Options_Pages <https://codex.wordpress.org/Creating_Options_Pages>`_ or go throw the next list of steps:
 
 1. Create a new folder inside of includes/options folder, with the name of the new panel.
-2. Create main.php and form.php and copy the content and adjust the function and variable names. Here some tips to do that: (TODO)
+2. Create main.php and form.php. Copy the content form general_information files and adjust the function and variable names. Here some tips to do that: (TODO)
 3. Inside your Panel folder, create a card folder with the name of the card you wish to create.
 4. Inisde the card folder you just created, add a new file called input_fields.php. You need to include this file in the main.php.
 
